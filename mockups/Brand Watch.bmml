@@ -1,0 +1,475 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1313" measuredH="1445" mockupW="1313" mockupH="1425">
+  <controls>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::TitleWindow" x="60" y="20" w="475" h="415" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Gothic%20Lolita%20Brand%20Hunter%20-%20Login</text>
+        <topheight>26</topheight>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::StickyNote" x="558" y="92" w="109" h="312" measuredW="109" measuredH="123" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cuter%20name%20needed%20-%20Jenica%0ABrand%20Watch%0AFrill%20Alert%0AFrill%20Timer%0AFrilly%20Updates%0AAll%20the%20Brands%21%0ABrand%20Seeker%0ABrand%20Finder%0ABrand%20Basics%0ALace%20Finder%0ALace%20Watch%0ABrand%20Beholden%0AMarque%0A--%20Marisa</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::TextInput" x="318" y="150" w="139" h="-1" measuredW="73" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>username</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::TextInput" x="318" y="192" w="139" h="-1" measuredW="71" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>password</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Image" x="75" y="93" w="228" h="84" measuredW="77" measuredH="79" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./stock%2520pictures/Gothic%2520lolita/Tumblr_ku8xhfrM9m1qa20ryo1_400.jpg</src>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Image" x="75" y="287" w="228" h="82" measuredW="77" measuredH="79" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./stock%2520pictures/Gothic%2520lolita/f004822d36bc893f3b03afa357b7ff38.jpg</src>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Image" x="75" y="192" w="228" h="80" measuredW="77" measuredH="79" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./stock%2520pictures/Gothic%2520lolita/4add6e8674e52cd83af72538c02778e3.jpg</src>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::RoundButton" x="115" y="57" w="336" h="327" measuredW="32" measuredH="32" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>15374745</color>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::RoundButton" x="60" y="42" w="475" h="370" measuredW="32" measuredH="32" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>3355443</color>
+        <shape>rectangle</shape>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Button" x="318" y="245" w="-1" h="-1" measuredW="54" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Login</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Button" x="390" y="245" w="-1" h="-1" measuredW="70" measuredH="27" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Sign%20Up</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::LinkBar" x="851" y="49" w="-1" h="-1" measuredW="155" measuredH="19" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>15374745</color>
+        <text>Home%2C%20Brand%2C%20Settings</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="__group__" x="693" y="20" w="475" h="415" measuredW="475" measuredH="415" zOrder="12" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="0" y="0" w="475" h="415" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="19">
+          <controlProperties>
+            <text>Gothic%20Lolita%20Brand%20Hunter%20-%20Home</text>
+            <topheight>26</topheight>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="22" w="475" h="370" measuredW="32" measuredH="32" zOrder="1" locked="false" isInGroup="19">
+          <controlProperties>
+            <color>3355443</color>
+            <shape>rectangle</shape>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::RoundButton" x="69" y="44" w="336" h="327" measuredW="32" measuredH="32" zOrder="2" locked="false" isInGroup="19">
+          <controlProperties>
+            <color>15374745</color>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Label" x="865" y="83" w="-1" h="-1" measuredW="132" measuredH="36" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6770343</color>
+        <size>28</size>
+        <text>Username</text>
+      </controlProperties>
+    </control>
+    <control controlID="21" controlTypeID="com.balsamiq.mockups::FieldSet" x="819" y="112" w="222" h="292" measuredW="200" measuredH="170" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.75</backgroundAlpha>
+        <color>3480693</color>
+        <text>Brand%20Feed</text>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Label" x="372" y="75" w="-1" h="-1" measuredW="80" measuredH="304" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10470904</color>
+        <size>72</size>
+        <text>Elegance</text>
+        <textOrientation>down</textOrientation>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Label" x="1057" y="101" w="-1" h="-1" measuredW="80" measuredH="208" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10470904</color>
+        <size>72</size>
+        <text>Gothic</text>
+        <textOrientation>down</textOrientation>
+      </controlProperties>
+    </control>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::Label" x="716" y="84" w="-1" h="-1" measuredW="80" measuredH="243" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10470904</color>
+        <size>72</size>
+        <text>Classic</text>
+        <textOrientation>down</textOrientation>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="__group__" x="836" y="135" w="134" h="56" measuredW="134" measuredH="56" zOrder="16" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="-1" h="-1" measuredW="134" measuredH="21" zOrder="0" locked="false" isInGroup="29">
+          <controlProperties>
+            <color>10470904</color>
+            <text>Metamorphose%20Update</text>
+          </controlProperties>
+        </control>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::Link" x="15" y="21" w="-1" h="-1" measuredW="41" measuredH="16" zOrder="1" locked="false" isInGroup="29">
+          <controlProperties>
+            <size>10</size>
+            <text>Meta%20link</text>
+          </controlProperties>
+        </control>
+        <control controlID="5" controlTypeID="com.balsamiq.mockups::Link" x="15" y="40" w="-1" h="-1" measuredW="41" measuredH="16" zOrder="2" locked="false" isInGroup="29">
+          <controlProperties>
+            <size>10</size>
+            <text>Meta%20link</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="30" controlTypeID="__group__" x="836" y="212" w="163" h="53" measuredW="163" measuredH="53" zOrder="19" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="-1" h="-1" measuredW="163" measuredH="21" zOrder="0" locked="false" isInGroup="30">
+          <controlProperties>
+            <color>10470904</color>
+            <text>Baby%20the%20Stars%20Shine%20Bright</text>
+          </controlProperties>
+        </control>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::Link" x="16" y="21" w="-1" h="-1" measuredW="47" measuredH="16" zOrder="1" locked="false" isInGroup="30">
+          <controlProperties>
+            <size>10</size>
+            <text>BtSSB%20link</text>
+          </controlProperties>
+        </control>
+        <control controlID="5" controlTypeID="com.balsamiq.mockups::Link" x="16" y="37" w="-1" h="-1" measuredW="47" measuredH="16" zOrder="2" locked="false" isInGroup="30">
+          <controlProperties>
+            <size>10</size>
+            <text>BtSSB%20link</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="31" controlTypeID="__group__" x="60" y="518" w="475" h="415" measuredW="475" measuredH="415" zOrder="20" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="0" y="0" w="475" h="415" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="31">
+          <controlProperties>
+            <text>Gothic%20Lolita%20Brand%20Hunter%20-%20Brand</text>
+            <topheight>26</topheight>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="22" w="475" h="370" measuredW="32" measuredH="32" zOrder="1" locked="false" isInGroup="31">
+          <controlProperties>
+            <color>3355443</color>
+            <shape>rectangle</shape>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::RoundButton" x="69" y="44" w="336" h="327" measuredW="32" measuredH="32" zOrder="2" locked="false" isInGroup="31">
+          <controlProperties>
+            <color>15374745</color>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::LinkBar" x="218" y="546" w="-1" h="-1" measuredW="155" measuredH="19" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>15374745</color>
+        <text>Home%2C%20Brand%2C%20Settings</text>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="513" y="625" w="-1" h="279" measuredW="16" measuredH="100" zOrder="22" locked="false" isInGroup="-1"/>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="1152" y="112" w="-1" h="292" measuredW="16" measuredH="100" zOrder="23" locked="false" isInGroup="-1"/>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Label" x="231" y="580" w="-1" h="-1" measuredW="132" measuredH="36" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6770343</color>
+        <size>28</size>
+        <text>Username</text>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::RadioButton" x="164" y="644" w="-1" h="-1" measuredW="54" measuredH="22" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Sweet</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::RadioButton" x="270" y="644" w="-1" h="-1" measuredW="54" measuredH="22" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Gothic</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::RadioButton" x="372" y="644" w="-1" h="-1" measuredW="60" measuredH="22" zOrder="28" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Classic</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Label" x="242" y="625" w="-1" h="-1" measuredW="110" measuredH="21" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6770343</color>
+        <text>Subscribe%20by%20Type</text>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::HRule" x="242" y="671" w="-1" h="-1" measuredW="100" measuredH="10" zOrder="30" locked="false" isInGroup="-1"/>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Label" x="242" y="625" w="-1" h="-1" measuredW="110" measuredH="21" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6770343</color>
+        <text>Subscribe%20by%20Type</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::Label" x="242" y="696" w="-1" h="-1" measuredW="115" measuredH="21" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>false</bold>
+        <color>6770343</color>
+        <text>Subscribe%20by%20Brand</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::CheckBox" x="206" y="717" w="-1" h="-1" measuredW="183" measuredH="22" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Baby%20the%20Stars%20Shine%20Bright</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::CheckBox" x="206" y="739" w="-1" h="-1" measuredW="108" measuredH="22" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Metamorphose</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::CheckBox" x="206" y="761" w="-1" h="-1" measuredW="142" measuredH="22" zOrder="35" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Alice%20and%20the%20Pirates</text>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::StickyNote" x="544" y="508" w="109" h="231" measuredW="109" measuredH="123" zOrder="36" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Instead%20of%20girls%20just%20only%20picking%20what%20brand%20they%20can%20follow%2C%20they%20can%20pick%20by%20type%20which%20has%20preselected%20brands%20based%20on%20type%20-%20Jenica</text>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::Label" x="404" y="621" w="-1" h="-1" measuredW="80" measuredH="208" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10470904</color>
+        <size>72</size>
+        <text>Sweet</text>
+        <textOrientation>down</textOrientation>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Label" x="84" y="621" w="-1" h="-1" measuredW="80" measuredH="206" zOrder="37" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10470904</color>
+        <size>72</size>
+        <text>Kawaii</text>
+        <textOrientation>down</textOrientation>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="__group__" x="708" y="518" w="475" h="415" measuredW="475" measuredH="415" zOrder="38" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="0" y="0" w="475" h="415" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="51">
+          <controlProperties>
+            <text>Gothic%20Lolita%20Brand%20Hunter%20-%20Settings</text>
+            <topheight>26</topheight>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="22" w="475" h="370" measuredW="32" measuredH="32" zOrder="1" locked="false" isInGroup="51">
+          <controlProperties>
+            <color>3355443</color>
+            <shape>rectangle</shape>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::RoundButton" x="69" y="44" w="336" h="327" measuredW="32" measuredH="32" zOrder="2" locked="false" isInGroup="51">
+          <controlProperties>
+            <color>15374745</color>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::LinkBar" x="866" y="546" w="-1" h="-1" measuredW="155" measuredH="19" zOrder="39" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>15374745</color>
+        <text>Home%2C%20Brand%2C%20Settings</text>
+      </controlProperties>
+    </control>
+    <control controlID="55" controlTypeID="com.balsamiq.mockups::Label" x="879" y="580" w="-1" h="-1" measuredW="132" measuredH="36" zOrder="40" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6770343</color>
+        <size>28</size>
+        <text>Username</text>
+      </controlProperties>
+    </control>
+    <control controlID="56" controlTypeID="com.balsamiq.mockups::Label" x="883" y="616" w="-1" h="-1" measuredW="124" measuredH="21" zOrder="41" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6770343</color>
+        <text>Edit%20Your%20Information</text>
+      </controlProperties>
+    </control>
+    <control controlID="57" controlTypeID="com.balsamiq.mockups::TextInput" x="882" y="666" w="127" h="-1" measuredW="102" measuredH="27" zOrder="42" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Edit%20email%20here</text>
+      </controlProperties>
+    </control>
+    <control controlID="58" controlTypeID="com.balsamiq.mockups::Label" x="878" y="645" w="-1" h="-1" measuredW="135" measuredH="21" zOrder="43" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Registered@email.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="59" controlTypeID="com.balsamiq.mockups::Switch" x="851" y="736" w="-1" h="-1" measuredW="49" measuredH="28" zOrder="44" locked="false" isInGroup="-1"/>
+    <control controlID="60" controlTypeID="com.balsamiq.mockups::Switch" x="851" y="801" w="-1" h="-1" measuredW="49" measuredH="28" zOrder="45" locked="false" isInGroup="-1"/>
+    <control controlID="61" controlTypeID="com.balsamiq.mockups::Label" x="910" y="738" w="-1" h="-1" measuredW="131" measuredH="24" zOrder="46" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Email%20notifications</text>
+      </controlProperties>
+    </control>
+    <control controlID="62" controlTypeID="com.balsamiq.mockups::Label" x="910" y="803" w="-1" h="-1" measuredW="130" measuredH="24" zOrder="47" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Push%20Notifications</text>
+      </controlProperties>
+    </control>
+    <control controlID="63" controlTypeID="__group__" x="390" y="1030" w="475" h="415" measuredW="475" measuredH="415" zOrder="48" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="0" y="0" w="475" h="415" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="63">
+          <controlProperties>
+            <text>Gothic%20Lolita%20Brand%20Hunter%20-%20Sign%20Up</text>
+            <topheight>26</topheight>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="22" w="475" h="370" measuredW="32" measuredH="32" zOrder="1" locked="false" isInGroup="63">
+          <controlProperties>
+            <color>3355443</color>
+            <shape>rectangle</shape>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::RoundButton" x="69" y="44" w="336" h="327" measuredW="32" measuredH="32" zOrder="2" locked="false" isInGroup="63">
+          <controlProperties>
+            <color>15374745</color>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="64" controlTypeID="com.balsamiq.mockups::TextInput" x="558" y="1148" w="139" h="-1" measuredW="118" measuredH="27" zOrder="49" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Create%20username</text>
+      </controlProperties>
+    </control>
+    <control controlID="65" controlTypeID="com.balsamiq.mockups::TextInput" x="558" y="1190" w="139" h="-1" measuredW="90" measuredH="27" zOrder="50" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Create%20Email</text>
+      </controlProperties>
+    </control>
+    <control controlID="66" controlTypeID="com.balsamiq.mockups::TextInput" x="558" y="1232" w="139" h="-1" measuredW="70" measuredH="27" zOrder="51" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Password</text>
+      </controlProperties>
+    </control>
+    <control controlID="67" controlTypeID="com.balsamiq.mockups::TextInput" x="558" y="1274" w="139" h="-1" measuredW="120" measuredH="27" zOrder="52" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Confirm%20Password</text>
+      </controlProperties>
+    </control>
+    <control controlID="68" controlTypeID="com.balsamiq.mockups::Button" x="668" y="1316" w="-1" h="-1" measuredW="64" measuredH="27" zOrder="53" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cancel</text>
+      </controlProperties>
+    </control>
+    <control controlID="69" controlTypeID="com.balsamiq.mockups::Button" x="520" y="1316" w="-1" h="-1" measuredW="64" measuredH="27" zOrder="54" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Submit</text>
+      </controlProperties>
+    </control>
+    <control controlID="70" controlTypeID="com.balsamiq.mockups::Label" x="1057" y="635" w="-1" h="-1" measuredW="80" measuredH="231" zOrder="55" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10470904</color>
+        <size>72</size>
+        <text>Beauty</text>
+        <textOrientation>down</textOrientation>
+      </controlProperties>
+    </control>
+    <control controlID="71" controlTypeID="com.balsamiq.mockups::Label" x="732" y="627" w="-1" h="-1" measuredW="80" measuredH="246" zOrder="56" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10470904</color>
+        <size>72</size>
+        <text>Fashion</text>
+        <textOrientation>down</textOrientation>
+      </controlProperties>
+    </control>
+    <control controlID="72" controlTypeID="com.balsamiq.mockups::Label" x="425" y="1142" w="-1" h="-1" measuredW="80" measuredH="191" zOrder="57" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10470904</color>
+        <size>72</size>
+        <text>Ginza</text>
+        <textOrientation>down</textOrientation>
+      </controlProperties>
+    </control>
+    <control controlID="73" controlTypeID="com.balsamiq.mockups::Label" x="747" y="1120" w="-1" h="-1" measuredW="80" measuredH="250" zOrder="58" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10470904</color>
+        <size>72</size>
+        <text>Shibuya</text>
+        <textOrientation>down</textOrientation>
+      </controlProperties>
+    </control>
+    <control controlID="74" controlTypeID="com.balsamiq.mockups::Arrow" x="352" y="49" w="341" h="208" measuredW="150" measuredH="100" zOrder="59" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>bottom</direction>
+        <leftArrow>false</leftArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="76" controlTypeID="com.balsamiq.mockups::Arrow" x="425" y="257" w="331" h="774" measuredW="150" measuredH="100" zOrder="60" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>false</leftArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="78" controlTypeID="com.balsamiq.mockups::Arrow" x="242" y="435" w="310" h="898" measuredW="150" measuredH="100" zOrder="61" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="79" controlTypeID="com.balsamiq.mockups::Arrow" x="404" y="435" w="310" h="898" measuredW="150" measuredH="100" zOrder="66" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="80" controlTypeID="com.balsamiq.mockups::StickyNote" x="544" y="724" w="109" h="209" measuredW="109" measuredH="123" zOrder="62" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Maybe%20you%20could%20put%20in%20a%20quote%20review%20section%20as%20well%3F%20or%20general%20attributes%20if%20someone%20isn%27t%20familiar%20with%20%20what%20they%20like%20yet%3F%20-%20Marisa</text>
+      </controlProperties>
+    </control>
+    <control controlID="81" controlTypeID="com.balsamiq.mockups::Arrow" x="1111" y="135" w="-1" h="-1" measuredW="150" measuredH="100" zOrder="64" locked="false" isInGroup="-1">
+      <controlProperties>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="82" controlTypeID="com.balsamiq.mockups::StickyNote" x="1204" y="215" w="109" h="165" measuredW="109" measuredH="123" zOrder="63" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Blue%20words%20change%20everytime%20a%20new%20page%20is%20loaded.%20pulled%20from%20a%20pool%20of%20GL-esque%20words</text>
+      </controlProperties>
+    </control>
+    <control controlID="83" controlTypeID="com.balsamiq.mockups::StickyNote" x="0" y="551" w="109" h="209" measuredW="109" measuredH="123" zOrder="65" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>GL%20accessories%20stores%20could%20also%20be%20encluided%20and%20set%20with%20the%20type%20indicators%20-%20Marisa</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
