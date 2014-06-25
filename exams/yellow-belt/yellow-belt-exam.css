@@ -1,0 +1,211 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+  height: 100px;
+  background-color: #DDDAD2;
+}
+  .logo{
+    margin-top: 10px;
+    margin-left: 20px;
+
+  }
+  #header button{
+    position: absolute;
+    right: 26%;
+    background-color: #1D538F;
+    color: white;
+    margin-top: 30px;
+    margin-left: 40%;
+    padding-top: 3px;
+    padding-right: 20px;
+    vertical-align: top;
+  }
+  #header input{
+    position: absolute;
+    right: 7%;
+    margin-top: 30px;
+    vertical-align: top;
+  }
+
+  .search{
+    position: absolute;
+    right: 2%;
+    margin-top: 30px;
+    vertical-align: top;
+    height: 20px;
+    width: 20px;
+  }
+  #header ul{
+    position: absolute;
+    right: 1%;
+    font-size: 14px;
+    margin-top: 16px;
+  }
+    #header li{
+      display: inline-block;
+    }
+    #header a {
+      color: #383839;
+      border-right: 1px solid #383839;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+
+#content{
+  background-color: #1F446D;
+}
+  .side-bar{
+    vertical-align: top;
+    background-color: #DDDAD2;
+    width: 220px;
+    height: 230px;
+    margin: 20px;
+    display: inline-block;
+  }
+    .side-bar h2{
+      background-color: #103968;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      border-top: 1px solid #DDDAD2;
+      border-right: 1px solid #DDDAD2; 
+      border-left: 1px solid #DDDAD2;
+      padding-top: 5px;
+      padding-right: 5px;
+      padding-left: 10px;
+    }
+
+    .side-bar h4{
+      background-color: #103968;
+      color: white;
+      font-size: 10px;
+      border-right: 1px solid #DDDAD2; 
+      border-left: 1px solid #DDDAD2;
+      padding-left: 10px;
+      padding-bottom: 5px;
+    }
+    .side-bar p{
+      margin-top: 10px;
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .side-bar input{
+      margin-left: 10px;
+      border-radius: 5px;
+      height: 20px;
+    }
+    .forgot{
+      color: blue;
+      padding: 5px 0px;
+      margin-left: 10px;
+      font-size: 12px;
+      display: block;
+      text-decoration: none;
+    }
+    .side-bar button{
+      background-color: #383839;
+      color: white;
+      margin-left: 10px;
+      padding: 2px 10px;
+      display: inline-block;
+      border-radius: 8px;
+    }
+    .register{
+      display: inline-block;
+      color: blue;
+      font-size: 12px;
+      margin-left: 5px;
+      text-decoration: none;
+    }
+
+  .content-img{
+    position: absolute;
+    left: 260px;
+    height: 300px;
+    margin-right: 20%;
+    vertical-align: top;
+  }
+  .new-customer{
+    display: block;
+    background-color: #103968;
+    color: white;
+    font-size: 16px;
+    width: 220px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+  }
+  h3{
+    background-color: #DDDAD2;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+    h3 a{
+      text-decoration: none;
+      color: blue;
+    }
+  .articles{
+    width: 30%;
+    height: 110px;
+    display: inline-block;
+    background-color: #DDDAD2;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    vertical-align: top;
+  }
+    .article-img{
+      width: 80px;
+      height: 80px;
+      margin: 15px;
+    }
+    .articles h6{
+      display: inline-block;
+      width: 170px;
+      font-size: 12px;
+      vertical-align: top;
+      margin-top: 15px;
+    }
+    .articles p{
+      color: blue;
+      position: relative;
+      left: 115px;
+      top: -75px;
+      display: inline-block;
+      font-size: 12px;
+      width: 170px;
+      vertical-align: top;
+    }
+  #ticker ul{
+    background-color: #DDDAD2;
+    height: 30px;
+  }
+    #ticker ul li{
+      display: inline-block;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+      #ticker ul li a{
+        color: #383839;
+        text-decoration: none;
+        border-right: 1px solid #383839;
+        padding-left: 15px;
+        padding-right: 10px;
+      }
+      #ticker ul li p{
+        padding-left: 200px; 
+      }
+        .bold{
+          font-weight: bold;
+        }
+        .green{
+          color: green;
+          font-weight: bold;
+        }

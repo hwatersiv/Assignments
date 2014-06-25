@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Introduction to Callbacks</title>
+ <script>
+  // declare the wizard
+  var wizard = {
+   // wizard attributes:
+   health: 500,
+   mana: 500,
+   // wizard spells:
+   spells: {
+    open_sesame: {mana_cost: 10},
+    chain_lightning: {mana_cost: 20},
+    fireball: {mana_cost: 30}
+   },
+   // wizard abilities
+   cast_spell: function(spell, callback) {
+
+    result = Math.floor((Math.random() * 100 ) + 1)
+
+    if (result <= 20)
+    {
+      callback(0);
+    }
+    else
+    {
+
+      if (spell == "open_sesame") {
+        this.mana -= this.spells.open_sesame.mana_cost;
+      }
+      else if (spell == "chain_lightning") {
+        this.mana -= this.spells.chain_lightning.mana_cost;
+      }
+      else if (spell == "fireball"){
+        this.mana -= this.spells.fireball.mana_cost;
+      }
+    callback(1);
+    }
+   }
+    
+  }
+
+
+  wizard.cast_spell('fireball', function(par){
+    if(par == 0){
+      alert("Your spell failed");
+    }
+    else{
+    alert("Spell casted! The wizards current mana pool is " + wizard.mana);
+    }
+  });
+ </script>
+</head>
+<body>
+</body>
+</html>

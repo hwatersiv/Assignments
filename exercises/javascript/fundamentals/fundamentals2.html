@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fundamentals II</title>
+	<script>
+
+		var person = {};
+		person = {
+			name: "Von",
+			distance_travelled: 0,
+
+			say_name: function(){
+				alert(person.name)
+			},
+
+			say_something: function(something){
+				return person.name + " says " + something;
+			},
+
+			walk: function(){
+				person.distance_travelled += 3;
+				alert(person.name + " is walking.");
+				console.log("The distance travelled has been increased by 3. The total is now " + person.distance_travelled);
+			},
+
+			run: function(){
+				person.distance_travelled += 10;
+				alert(person.name + " is running.");
+				console.log("The distance travelled has been increased by 10. The total is now " + person.distance_travelled);
+			},
+
+			crawl: function(){
+				person.distance_travelled += 1;
+				alert(person.name + " is crawling.");
+				console.log("The distance travelled has been increased by 1. The total is now " + person.distance_travelled);
+			},
+
+			fly: function(flying, not_flying){
+				result = Math.floor((Math.random() * 100 ) + 1)
+				if (result <= 30 ){
+					return flying();
+				}
+				else{
+					return not_flying();
+				}
+			},
+
+			do_something: function(){
+				var rand = Math.floor((Math.random() * 3 ) + 1);
+				if (rand == 1){
+					return person.walk();
+				};
+				if (rand == 2){
+					return person.run();
+				};
+				if (rand == 3){
+					return person.crawl();
+				};
+
+			}
+
+		}
+
+		var flying = function(){
+			return alert("Hey, I'm flying!");
+		}
+
+		var not_flying = function(){
+			return alert("Hey, I'm NOT flying!");
+		}
+
+console.log(person.do_something());
+console.log(person.fly(flying, not_flying));
+
+
+
+	</script>
+
+</head>
+<body>
+	
+</body>
+</html>

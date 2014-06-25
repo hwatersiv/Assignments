@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sortable Picture</title>
+<meta name="description" content="jQueryui demo">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/trontastic/jquery-ui.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script>
+$(function() {
+    $( "#accordion" ).accordion();
+  });
+
+$(function() {
+    $( "#tabs" ).tabs();
+  });
+
+$(function() {
+    // run the currently selected effect
+    function runEffect() {
+      // get effect type from
+      var selectedEffect = $( "#effectTypes" ).val();
+ 
+      // most effect types need no options passed by default
+      var options = {};
+      // some effects have required parameters
+      if ( selectedEffect === "scale" ) {
+        options = { percent: 0 };
+      } else if ( selectedEffect === "transfer" ) {
+        options = { to: "#button", className: "ui-effects-transfer" };
+      } else if ( selectedEffect === "size" ) {
+        options = { to: { width: 200, height: 60 } };
+      }
+ 
+      // run the effect
+      $( "#effect" ).effect( selectedEffect, options, 500, callback );
+    };
+ 
+    // callback function to bring a hidden box back
+    function callback() {
+      setTimeout(function() {
+        $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+      }, 1000 );
+    };
+ 
+    // set effect from select menu value
+    $( "#button" ).click(function() {
+      runEffect();
+      return false;
+    });
+  });
+
+function random_color()
+    {
+      var rgb = ['a', 'b', 'c', 'd', 'e', 'f', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+      color = '#'  //this is what we'll return!
+      for(var i = 0; i < 6; i++) 
+      {
+        x = Math.floor((Math.random()*16))
+        color += rgb[x];  
+      };
+      return color;
+    }
+
+$(document).ready(function() {
+
+  $('.seizure').css("background-color", random_color);
+
+})
+
+</script>
+<style>
+  #accordion{
+    width: 800px;
+  }
+
+  .toggler { width: 500px; height: 200px; position: relative; }
+  #button { padding: .5em 1em; text-decoration: none; }
+  #effect { width: 240px; height: 135px; padding: 0.4em; position: relative; }
+  #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+    .ui-effects-transfer { border: 2px dotted gray; }
+  .seizure{
+    width: 100px;
+    height: 100px;
+  }
+</style>
+</head>
+<body>
+<div id="accordion">
+  <h3>This section has some tabs</h3>
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">jQueryUI</a></li>
+    <li><a href="#tabs-2">Is pretty nifty</a></li>
+    <li><a href="#tabs-3">and easy to play with</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>at its base takes some time to get used to</p>
+  </div>
+  <div id="tabs-2">
+    <p>and powerful. It can get really complicated.</p>
+  </div>
+  <div id="tabs-3">
+    <p>The JQueryUi feels a lot easier to pick up and play with</p>
+  </div>
+</div>
+  <h3>I'm a Section</h3>
+  <div>
+    <p>
+    with some text
+    </p>
+</div>
+  <h3>This will give you a seizure</h3>
+  <div class="toggler">
+  <div id="effect" class="ui-widget-content ui-corner-all">
+    <div class="seizure"></div>
+    </div>
+ 
+  <select name="effects" id="effectTypes">
+
+  <option value="pulsate">Pulsate</option>
+
+  </select>
+ 
+  <a href="#" id="button" class="ui-state-default ui-corner-all">Run Effect</a>
+</div>
+  <h3>Needs more</h3>
+  <div>
+    <p>Cowbell!
+    </p>
+  </div>
+</div>
+</body>
+</html>

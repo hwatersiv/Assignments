@@ -1,0 +1,24 @@
+*{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.yellow{
+  color: yellow;
+}
+
+.title{
+  background-color: #B3DDEB;
+  font-size: 50px;
+  margin-top: 50px;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.navlink{
+  display: inline-block;
+}
+
+img{
+  width: 600px;
+  height: 400px;
+}

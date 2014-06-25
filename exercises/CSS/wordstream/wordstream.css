@@ -1,0 +1,199 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+
+}
+
+  #toolbar{
+    display: inline-block;
+    background-color: #F3F4F5;
+    border-radius: 5px;
+    font-size: 10px;
+    width: 320px;
+    height: 25px;
+    margin-left: 55%;
+    margin-right: 0;
+    vertical-align: top;
+  }
+    #toolbar p{
+      padding-top: 5px;
+    }
+    #toolbar p a{
+      color: grey;
+      padding: 8px;
+      vertical-align: middle;
+      text-decoration: none;
+    }
+
+  form{
+    display: inline;
+    
+  }
+    form input{
+      color: white;
+      background-color: blue;
+      display: inline-block;
+      font-size: 10px;
+      width: 6%;
+      margin-left: 10px;
+      height: 23px;
+      vertical-align: top;
+    }
+  img [alt=wordstream]{
+    width: 33%;
+    height: 40px;
+  }
+  .header{
+    color: white;
+    background-color: #137BC3;
+    height: 35px;
+    vertical-align: middle;
+    padding-top: 5px;
+  }
+  img [alt="phone"]{
+    width: 140px;
+    height: 40px;
+  }
+  .breadcrumb{
+    display: inline-block;
+    margin-left: 28%;
+    vertical-align: top;
+  }
+    p a{
+      color: #137BC3;
+      vertical-align: top;
+      text-decoration: none;
+
+    }
+  .phone{
+    height: 30px;
+    width: 140px;
+    margin-left: 40%;
+  }
+
+  #sidebar{
+    display: inline-block;
+    width: 205px; 
+    height: 380px;
+  }
+    #sidebar h2{
+      color: #137BC3;
+      font-size: 18px;
+      padding-left: 5px;
+      padding-bottom: 8px;
+    }
+    #sidebar h3{
+      color: red;
+      font-size: 12px;
+      padding-left: 5px;
+    }
+    #sidebar p{
+      font-size: 10px;
+      padding-left: 5px;
+      padding-bottom: 15px;
+    }
+    #sidebar p a{
+      color: #137BC3;
+      text-decoration: none;
+    }
+    .nocard{
+      text-align: center;
+      padding-top: 5px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid grey;
+    }
+    .demo{
+      color: white;
+      background-color: #137BC3;
+      font-weight: bold;
+      border: none;
+      border-radius: 3px;
+      width: 205px;
+      height: 20px;
+    }
+    .trial{
+      color: white;
+      background-color: orange;
+      font-weight: bold;
+      border: none;
+      border-radius: 3px;
+      width: 205px;
+      height: 20px;
+      margin-top: 5px;
+    }
+    .ad{
+      display: inline-block;
+      width: 180px;
+      margin-top: 10px;
+    }
+
+  #content{
+    display: inline-block;
+    border-top: 1px solid grey;
+    width: 758px;
+    vertical-align: top;
+    margin-left: 30px;
+  }
+    #content h2{
+      color: #137BC3;
+      padding-bottom: 10px;
+    }
+    #content p{
+      padding-bottom: 15px;
+    }
+    #content ul{
+      list-style: square;
+      padding-bottom: 15px;
+      padding-left: 18px;
+    }
+    #content ul li span{
+      font-weight: bold;
+    }
+    #content ul li a{
+      color: #137BC3;
+      text-decoration: none;
+    }
+    #ad{
+      border: 5px solid #137BC3;
+    }
+      #ad img{
+        display: inline-block;
+        width: 50px;
+        height: 100px;
+      }
+      #textarea{
+        display: inline-block;
+        font-size: 16px;
+        width: 90%;
+        vertical-align: top;
+      }
+        #textarea h2{
+          color: #137BC3;
+          display: inline-block;
+          vertical-align: top;
+        }
+        #textarea p{
+          display: inline-block;
+          vertical-align: top;
+          padding-left: 5px;
+        }
+        .emphasis{
+          font-weight: bold;
+        }
+        .start{
+          color: white;
+          background-color: #B2CB13;
+          border-radius: 10px;
+          border: 1px solid green;
+          width: 150px;
+          height: 40px;
+          margin-bottom: 5px;
+          margin-left: 5px;
+        }
+    #content h3{
+      color: #137BC3;
+      padding: 10px 0;
+    }

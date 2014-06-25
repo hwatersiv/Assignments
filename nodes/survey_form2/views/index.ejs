@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+	<script>
+	$(document).ready(function(){
+		io = io.connect();
+		$("#survey_form").on('submit', function (){
+			var data = {};
+			data.name = $('input[name=name]').val();
+			data.location = $('select[name=location]').val();
+			data.language = $('select[name=language]').val();
+			data.comment = $('#comment').val();
+
+			event.preventDefault();
+			io.emit('posting_form', data);
+			// Listen for the deliver_ice_cream event
+			
+		})
+
+		io.on('updated_message', function(data) {
+			console.log(data);
+			$("#info").html('<h4>'+ data.name + " " + data.location + " " + data.language + " " + data.comment +'</h4>');
+		});
+		io.on('random_number', function(number) {
+			$('#number').html('<h4>'+ number.num +'</h4>');
+		});
+		
+	});
+	</script>
+  </head>
+  <body>
+  	<div>
+  		<h4>You emitted the following information to the server:</h4>
+		<p id="info"></p>
+  		<h4>You lucky number from the server is:</h4>
+  		<p id="number"></p>
+  	</div>
+    <div>
+    	<form id="survey_form" method="post">
+	    	<label>Your Name:<input type="text" name="name"></label>
+	    	<label>Dojo Location:<select name="location" id="location">
+	    		<option value="mountain_view">Mountain View</option>
+	    		<option value="seattle">Seattle</option>
+	    	</select></label>
+	    	<label>Favorite Language:<select name="language" id="language">
+	    		<option value="Javascript">Javascript</option>
+	    		<option value="node">Node</option>
+	    		<option value="python">Python</option>
+	    		<option value="ruby">Ruby</option>
+	    		<option value="php">Php</option>
+	    	</select></label>
+	    	<label>Comment (optional):</label>
+	    	<textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+	    	<input id="submit" type="submit" value='Submit'>
+	    </form>
+    </div>
+  </body>
+</html>

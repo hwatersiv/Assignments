@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sortable Picture</title>
+<meta name="description" content="jQueryui demo">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<style>
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+#sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+#sortable li span { position: absolute; margin-left: -1.3em; }
+</style>
+<script>
+  $(function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  });
+
+</script>
+</head>
+<body>
+  <ul id="sortable">
+  <img src="sea1.png" alt="sea1">
+  <img src="sea2.png" alt="sea1">
+  <img src="sea3.png" alt="sea1">
+  <img src="sea4.png" alt="sea1">
+  <img src="sea5.png" alt="sea1">
+  <img src="sea6.png" alt="sea1">
+  <img src="sea7.png" alt="sea1">
+</ul>
+</body>
+</html>

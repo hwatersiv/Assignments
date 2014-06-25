@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Intermediate jQuery</title>
+  <meta name="Intermediate jQuery" content="text/javascript">
+  <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="form.css">
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      $('form').submit(function() {
+        var first_name = ( $('#first_name').val());
+        var last_name = ( $('#last_name').val());
+        var email = ( $('#email').val());
+        var contact = ( $('#contact').val());
+        $('#data').append("<tr>");
+        $('#data').append("<td>" + first_name + "</td>");
+        $('#data').append("<td>" + last_name + "</td>");
+        $('#data').append("<td>" + email + "</td>");
+        $('#data').append("<td>" + contact + "</td>");
+        $('#data').append("</tr>");
+        return false;
+      })
+
+    });
+
+  </script>
+</head>
+<body>
+  <table class="table">
+    <thead>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>Email Address</td>
+      <td>Contact#</td>
+    </thead>
+    <tbody id="data">
+    </tbody>
+  </table>
+  <div class="container">
+    <h1>Add User</h1>
+    <form role="form">
+      <div class="form-group">
+        <label>First Name:</label>
+        <input type="text" id="first_name" name="first_name" placeholder="First Name">
+      </div>
+      <div class="form-group">
+        <label>Last Name:</label>
+        <input type="text" id="last_name" name="last_name" placeholder="Last Name">
+      </div>
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="text" id="email" name="email" placeholder="Email Address">
+      </div>
+      <div class="form-group">
+        <label>Contact #:</label>
+        <input type="text" id="contact"name="contact" placeholder="Phone #">
+      </div>
+      <input type="submit" class="btn btn-default" value='Add User' />
+    </form>
+  </div>
+</body>
+</html>

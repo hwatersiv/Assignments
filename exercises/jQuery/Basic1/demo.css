@@ -1,0 +1,41 @@
+.row{
+  border-bottom: 2px solid black;
+}
+
+.red{
+  color: red;
+}
+
+.blue{
+  color: blue;
+}
+
+#after.row .col-md-8.text-left p{
+  display: inline-block;
+}
+
+#show.row .col-md-8.text-left img{
+  display: none;
+}
+
+#hide img{
+  width: 174.5px;
+  height: 362px;
+
+}
+
+#slidedown.row .col-md-8.text-left p{
+  display: none;
+}
+
+#slidetoggle.row .col-md-8.text-left img{
+  display: none;
+}
+
+#fadein.row .col-md-8.text-left img{
+  display: none;
+}
+
+#focus.row p{
+  display: none;
+}

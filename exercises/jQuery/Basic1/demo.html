@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Demo</title>
+<meta name="description" content="jQuery demo">
+<link rel="stylesheet" type="text/css" href="demo.css">
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<script src="demo.js"></script>
+</head>
+<body>
+  <div id="addclass" class="row">
+    <h1 class="text-center">.addClass</h1>
+    <div class="col-md-4 text-right"><button type="button">.addclass</button></div>
+    <div class="col-md-8 text-left"><p>Click the button to add class "red" the paragraph</p></div>
+  </div>
+  <div id="after" class="row">
+    <h1 class="text-center">.after</h1>
+    <div class="col-md-4 text-right"><button>.after</button></div>
+    <div class="col-md-8 text-left"><p>You say 'Goodbye'</p></div>
+  </div>
+  <div id="append" class="row">
+    <h1 class="text-center">.append</h1>
+    <div class="col-md-4 text-right"><button>.append</button></div>
+    <div class="col-md-8 text-left"><p>The difference between .after() and .append() is, .append() puts things</p></div>
+  </div>
+  <div id="attr" class="row">
+    <h1 class="text-center">.attr</h1>
+    <div class="col-md-4 text-right"><button type="button">.attr</button></div>
+    <div class="col-md-8 text-left"><p>.attr can give attributes to tags and not just classes. But classes are the easiest to see be added.</p></div>
+  </div>
+  <div id="before" class="row">
+    <h1 class="text-center">.before</h1>
+    <div class="col-md-4 text-right"><button type="button">.before</button></div>
+    <div class="col-md-8 text-left"><p>but instead adds the code before the specified selector</p></div>
+  </div>
+  <div id="html" class="row">
+    <h1 class="text-center">.html</h1>
+    <div class="col-md-4 text-right"><button type="button">.html</button></div>
+    <div class="col-md-8 text-left"><p>Allows me to add any html tag in </p></div>
+  </div>
+  <div id="text" class="row">
+    <h1 class="text-center">.text</h1>
+    <div class="col-md-4 text-right"><button type="button">.text</button></div>
+    <div class="col-md-8 text-left"><p>.text will write text over the designated tag, and exactly to what is passed in for </p></div>
+  </div>
+  <div id="val" class="row">
+    <h1 class="text-center">.val</h1>
+    <div class="col-md-4 text-right"><button type="button">.val</button></div>
+    <div class="col-md-8 text-left"><p>Check one checkbox and click the ".val" button to return the value of the checkbox.</p>
+      <form action="/hello">
+        <input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
+        <input type="checkbox" name="vehicle" value="Car">I have a car<br>
+        <input type="checkbox" name="vehicle" value="Shoes">I don't have either
+      </form>
+    </div>
+  </div>
+  <div id="toggle" class="row">
+    <h1 class="text-center">.toggle</h1>
+    <div class="col-md-4 text-right"><button type="button">.toggle</button></div>
+    <div class="col-md-8 text-left"><p>.toggle keeps things in place until they are interacted with again. Double-click .toggle to morph MJ:</p>
+    <img src="MJ.gif" alt="empty"></div>
+  </div>
+  <div id="hide" class="row">
+    <h1 class="text-center">.hide</h1>
+    <div class="col-md-4 text-right"><button type="button">.hide</button></div>
+    <div class="col-md-8 text-left"><p>Hide this stealthy rogue by clicking the button</p>
+    <img src="Rogue.jpg" alt="empty">
+    </div>
+  </div>
+  <div id="show" class="row">
+    <h1 class="text-center">.show</h1>
+    <div class="col-md-4 text-right"><button type="button">.show</button></div>
+    <div class="col-md-8 text-left"><p>Click the button to reveal what is hidden</p>
+      <img src="bug.jpg" alt="empty"></div>
+  </div>
+  <div id="slidedown" class="row">
+    <h1 class="text-center">.slideDown</h1>
+    <div class="col-md-4 text-right"><button type="button">.slideDown</button></div>
+    <div class="col-md-8 text-left"><h4>Click the .slideDown button</h4><p>Hey you slide me down!</p></div>
+  </div>
+  <div id="slidetoggle" class="row">
+    <h1 class="text-center">.slideToggle</h1>
+    <div class="col-md-4 text-right"><button type="button">.addclass</button></div>
+    <div class="col-md-8 text-left"><p>Click the button to toggle the star on and off</p>
+    <img src="star.png" alt="empty"></div>
+  </div>
+  <div id="slideup" class="row">
+    <h1 class="text-center">.slideUp</h1>
+    <div class="col-md-4 text-right"><button type="button">.addclass</button></div>
+    <div class="col-md-8 text-left"><p>Click the button to slide up the image</p>
+    <img src="MJ.gif" alt="empty"></div>
+  </div>
+  <div id="fadeout" class="row">
+    <h1 class="text-center">.fadeOut</h1>
+    <div class="col-md-4 text-right"><button type="button">.addclass</button></div>
+    <div class="col-md-8 text-left"><p>Click the button to fade out the star</p>
+    <img src="star.png" alt="empty"></div>
+  </div>
+  <div id="fadein" class="row">
+    <h1 class="text-center">.fadeIn</h1>
+    <div class="col-md-4 text-right"><button type="button">.addclass</button></div>
+    <div class="col-md-8 text-left"><p>Click the button to fade in the image</p>
+    <img src="MJ.gif" alt="empty"></div>
+  </div>
+  <div id="focus" class="row">
+    <h1 class="text-center">.focus</h1>
+    <div class="col-md-4 text-right"><button type="button">.addclass</button></div>
+    <div class="col-md-8 text-left">
+    <h4>Click the button to see focus class in action</h4>
+    <p>Focusing causes one thing to to focus unless clicked on to something else</p></div>
+  </div>
+  <div id="click" class="row">
+    <h1 class="text-center">.click</h1>
+    <div class="col-md-4 text-right"></div>
+    <div class="col-md-8 text-left"><p>Lastly, this page, and all the buttons are used with click. Thanks for playing with jQuery</p></div>
+  </div>
+</body>
+</html>
