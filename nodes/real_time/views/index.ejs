@@ -17,6 +17,8 @@
 				event.preventDefault();
 				io.emit('got_a_new_user', user);
 				$('#signin').fadeOut("slow", function () {});
+				$('#my_box').fadeIn("slow", function () {});
+				$('#my_box h4').html(""+user.name+"");
 			});
 			$(document).on('keyup', 'textarea', function () {
 				var text = {};
@@ -24,10 +26,10 @@
 				io.emit('updated_text', text);
 			});
 			//listening
-			io.on('new_user', function (data) {
-				$('#container').append("<div id='my_box' class='chat_box'></div>");
-				//$('#my_box').fadeIn("slow", function () {});
-				//$("#my_box").html("<h4>" + data.name + "</h4><textarea name='message' id='text1' cols='20' rows='7'>");
+			io.on('new_user', function(data) {
+				$('#container').append("<div id='" + data.id + "' class='chat_box'></div>");
+				$("#my_box").html("<h4>" + data.id.name + "</h4><textarea name='message' id='text1' cols='18' rows='7'><textarea>");
+				console.log(data);
 			});
 
 			// io.on('text_update', function (message) {
@@ -48,6 +50,10 @@
 	    </form>
     </div>
 	<div id="container">
+		<div id="my_box">
+			<h4></h4>
+			<textarea name='message' id='text1' cols='18' rows='7'></textarea>
+		</div>
 	</div>
   </body>
 </html>

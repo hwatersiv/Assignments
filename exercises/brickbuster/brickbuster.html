@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<title>Brickbuster</title>>
+	<script type="text/javascript" src="brickbuster.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<link rel="stylesheet" href="./css/brickbuster.css" />
+</head>
+<script>
+	
+$(document).ready(function () {
+	for (var i = 0; i <= 56; i++) {
+		if( i < 14 ){
+			$('.brick-container').append("<div class='brick'></div>");
+		}
+
+		if( i > 14 && i <= 28 ){
+			$('.brick-container').append("<div class='brick orange'></div>");
+		}
+
+		if ( i > 28 && i <= 42 ){
+			$('.brick-container').append("<div class='brick yellow'></div>");
+		}
+
+		if (i > 42 && i <= 56){
+			$('.brick-container').append("<div class='brick green'></div>")
+		}	
+	};
+//place the paddle //////
+	$('.screen').append("<div id='paddle'></div>");
+	$('#paddle').css({
+		"bottom": paddle.y,
+		"left": paddle.x,
+		"width": paddle.width,
+		"height": paddle.height
+	});
+//move the paddle ///////
+	$(document).on("keydown", function (e) {
+		console.log(paddle.x , paddle.y);
+		if(paddle.x < 12){
+			paddle.x = 12;
+		}
+		if (paddle.x > 720){
+			paddle.x = 720;
+		}
+		if(e.keyCode == 39){
+			$('#paddle').css("left", paddle.x += 12);
+		}
+		if(e.keyCode == 37){
+			$('#paddle').css("left", paddle.x -= 12);
+		}
+	});
+//place the ball ////////
+	$('.screen').append("<div id='ball'><div>");
+	$('#ball').css({
+		"bottom": ball.y_start,
+		"left": ball.x_start,
+	})
+//move the ball ////////
+	
+});
+</script>
+
+<body>
+	<div id="console">
+		<div class="screen">
+			<div class="brick-container">	
+			</div>
+			<!-- <div id="ball"></div> -->
+		</div>
+	</div>
+</body>
+</html>

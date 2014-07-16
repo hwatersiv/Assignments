@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= title %></title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/stylesheets/style.css">
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+
+		$(document).ready(function () {
+			io = io.connect();
+			$('#survey_form').on('submit', function () {
+				var data = {};
+				data.name = $('#name').val();
+				data.location = $('#location').val();
+				data.language = $('#language').val();
+				data.comment = $('#comment').val();
+
+				event.preventDefault();
+				
+			})
+
+		})
+
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="border" style="display: hidden">
+				
+			</div>
+			<div class="border">
+				<form class="form-horizontal col-sm-10" role="form" id="survey_form" method="post">
+					<div class="form-group">
+						<label class="control-label col-sm-3">Your Name:</label>
+						<div class="col-sm-9">
+							<input class="form-control" type="text" id="name" name="name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3">Dojo Location:</label>
+						<div class="col-sm-9">
+							<select class="form-control" name="location" id="location">
+								<option value="seattle">Seattle</option>
+								<option value="mountin view">Mountain View</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3">Favorite Language:</label>
+						<div class="col-sm-9">
+							<select class="form-control" name="language" id="language">
+								<option value="ruby">Ruby</option>
+								<option value="javascript">Javascript</option>
+								<option value="python">Python</option>
+								<option value="php">PHP</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3">Comments (optional):</label>
+						<div class="col-sm-9">
+							<textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
+						</div>
+					</div>
+					<button class="btn btn-primary col-sm-offset-11" type="submit" name="submit">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Circles</title>
+
+</head>
+<body>
+<canvas id="myCanvas" width="1000" height="500" style="border:1px solid #000000;"></canvas>
+
+<script>
+
+	function Circle() {
+
+		this.rand_ptx = Math.floor((Math.random() * 1000) + 1),
+		this.rand_pty = Math.floor((Math.random() * 500) + 1),
+		this.rand_r = Math.floor((Math.random() * 20) + 1);
+	
+		var c = document.getElementById("myCanvas");
+		var ctx = c.getContext("2d");
+		ctx.beginPath();
+		ctx.arc(this.rand_ptx, this.rand_pty, this.rand_r,0,2*Math.PI);
+		ctx.stroke();
+	}
+
+for (var i = 0; i <= 500; i++) {
+	if (i == 0){
+		var time_begin = new Date();
+		circlei = new Circle();
+	}
+	else if (i == 500){
+		circlei = new Circle();
+		var time_end = new Date();
+		alert(time_end - time_begin);
+	}
+	else{
+		circlei = new Circle();
+	}
+
+
+	
+};
+
+
+</script>
+</body>
+</html>
