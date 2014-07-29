@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script>
+    	$(document).ready(function(){
+
+			//submitting
+			io = io.connect();
+			$('form').on('submit', function (){
+				var user = {};
+				user.name = $('input[name=name]').val();
+				
+				// Emitting
+				io.emit('got_a_new_user', user);
+				console.log(user);
+				$('#signin').fadeOut("slow", function () {});
+				return false;
+			});
+			//listening
+			io.on('myself', function (res) {
+				$('#container').append("<div class='chat_box'><h4>" + res.name + "</h4><div id='"+res.id+"'></div><textarea name='message' id='text1' cols='18' rows='7'></textarea></div>");
+			})
+			io.on('new_user', function (res) {
+
+				console.log(res);
+				$('#container').append("<div class='chat_box'><h4>" + res.name + "</h4><div id='"+res.id+"'></div></div>");
+			});
+			io.on('existing_users', function (res) {
+				for (var i = 0; i <= res.log.length - 2; i++) {
+					$('#container').append("<div class='chat_box'><h4>"+res.log[i].name+"</h4><div id='"+res.log[i].id+"'></div></div>");
+				};
+			});
+			// chatting
+		$(document).on('keyup', '#text1', function () {
+			var text = {};
+			text.message = $('#text1').val();
+			io.emit('updated_text', text);
+		});
+			io.on('text_update', function (res) {
+				$("#"+res.id).html(""+res.message.message+"");
+			});
+		});
+
+    </script>
+  </head>
+  <body>
+    <div id="signin">
+    	<form method="post">
+	    	<label>Your Name:</label>
+	    	<input type="text" name="name">
+	    	<button id="cancel">Cancel</button>
+	    	<input type="submit" name="submit" value="OK" />
+	    </form>
+    </div>
+	<div id="container">
+	</div>
+  </body>
+</html>

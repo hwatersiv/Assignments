@@ -1,0 +1,26 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.login{
+	border: 1px solid black;
+	height: 125px;
+	width: 500px;
+	padding: 20px;
+}
+.chat{
+	border: 1px solid black;
+	height: 450px;
+	overflow: auto;
+}
+.message{
+	margin-top: 20px;
+}
+.groupchat{
+	display: none;
+}

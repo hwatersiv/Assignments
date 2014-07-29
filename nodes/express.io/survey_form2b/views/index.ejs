@@ -12,25 +12,31 @@
 		$(document).ready(function () {
 			io = io.connect();
 			$('#survey_form').on('submit', function () {
-				var data = {};
-				data.name = $('#name').val();
-				data.location = $('#location').val();
-				data.language = $('#language').val();
-				data.comment = $('#comment').val();
+				io.emit("emit_survey", $(this).serializeArray());
 
 				event.preventDefault();
+			});
+			io.on("random_number", function (res){
+				var name = res.return_data[0].value,
+					location = res.return_data[1].value,
+					language = res.return_data[2].value,
+					comment = res.return_data[3].value;
 				
+				$(".response").show("slow", function () {
+					$(".response").append(
+						"<p>You information emitted to the server was: "+name+", "+location+", "+language+", "+comment+"</p>",
+						"<p>Your lucky number emitted from the server is: "+res.lucky_number+"</p>"
+					)
+				})
 			})
-
-		})
+		});
 
 	</script>
 </head>
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="border" style="display: hidden">
-				
+			<div class="border response">	
 			</div>
 			<div class="border">
 				<form class="form-horizontal col-sm-10" role="form" id="survey_form" method="post">

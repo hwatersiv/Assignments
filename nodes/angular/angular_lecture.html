@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="People">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular.JS Lecture</title>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+	<script>
+	var myfirstmodule = angular.module('People', []);
+	myfirstmodule.controller('peopleController', function ($scope) {
+		$scope.People = [
+		{name:'Trey', occupation: 'teacher'},
+		{name:'Tiger Woods', occupation: 'golfer'},
+		{name:'Oprah', occupation: 'talk show host'}];
+
+		$scope.add = function () {
+			$scope.People.push({name: $scope.newPerson.name, occupation: $scope.newPerson.occupation})
+			$scope.newPerson='';
+		}
+	})
+	</script>
+</head>
+<body>
+	<!--- data binding and directives -->
+	<h1>5+5 = {{5+5}}</h1>
+	<ul ng-init="People=[
+		{name:'Trey', occupation: 'teacher'},
+		{name:'Tiger Woods', occupation: 'golfer'},
+		{name:'Oprah', occupation: 'talk show host'}]">
+		<li ng-repeat="Person in People">{{Person.name}} : {{Person.occupation}}</li>
+	</ul>
+
+	<!--- modules -->
+	<div ng-controller="peopleController">
+		<ul>
+			<li ng-repeat="Person in People"><span ng-bind="Person.name"></span> : <span ng-bind="Person.occupation"></span></li>
+		</ul>
+		<input type="text" ng-model='newPerson.name'>
+		<input type="text" ng-model='newPerson.occupation'>
+		<button ng-click='add()'>Add People</button>
+	</div>
+</body>
+</html>

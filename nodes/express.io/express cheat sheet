@@ -1,0 +1,20 @@
+Getting started
+To set up an empty Express application, go to the directory where you want to create your express app (perhaps it's a good idea to create a folder called node somewhere in your user directory and run all of your node projects from this folder.) Then type this in the terminal/command-prompt.
+
+
+sudo npm install -g express-generator
+express --ejs first_app
+
+
+This would install express globally and install your first express app called first_app. We're going to be using ejs instead of jade as the html template engine. Jade is a popular html template engine that lets you create html texts with fewer texts but for the purpose of our training, we want you to use jshtml for all of your assignments.
+
+Once this is done, type
+
+
+cd first_app
+sudo npm install
+sudo npm install express.io
+This will install all dependencies and also install express.io.
+
+
+NOTE: As you work on our curriculum, make sure you're using express 3.x.  Do this by running 'sudo npm uninstall express' and running 'sudo npm install express@3.12.1' in the first_app directory (or the directory you created using the express command).

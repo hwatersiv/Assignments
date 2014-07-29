@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Customers</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+	<script>
+	var cust_app = angular.module('cust_app', []);
+
+	cust_app.factory('CustomerFactory', function () {
+		var factory = {};
+		var customers = [
+			{name: 'Von', date: 'October 21, 2014'},
+			{name: 'Jenica', date: 'October 4, 2014'},
+			{name: 'Nezumi', date: 'February 5, 2014'}
+		];
+
+		factory.show = function () {
+			return customers;
+		}
+
+		factory.create = function (data) {
+
+			for (var i = 0; i <= customers.length - 1; i++) {
+				if (data.name == customers[i].name){
+					var message = {};
+					message.error = ""+data.name+" is already present. Please choose another customer name.";
+					return message;
+					break;
+				}
+			};
+
+			customers.push({
+				name: data.name,
+				date: Date.now()
+			});
+		}
+
+		factory.destroy = function (id) {
+			customers.splice(id, 1)
+		}
+		return factory;
+	})
+
+	cust_app.controller('Customers',function ($scope, CustomerFactory) {
+		$scope.customers = CustomerFactory.show();
+
+		$scope.add = function () {
+			$scope.error = '';
+			data = CustomerFactory.create($scope.new_cust);
+			$scope.new_cust = '';
+			console.log(data);
+			if  (data !== undefined) {
+				$scope.error = data.error;
+			}
+		}
+
+		$scope.destroy = function (id) {
+			CustomerFactory.destroy(id);
+		}
+	})
+
+	</script>
+</head>
+<body>
+	<div class="container" ng-app="cust_app">
+		<div class="row" ng-controller="Customers">
+			<h3>Add a New Customer</h3>
+			<div class="errors" style="color: red;" ng-bind="error"></div>
+			<label>Customer Name:</label><input type="text" ng-model="new_cust.name">
+			<button class="btn btn-primary" ng-click="add()">Add</button>
+			<input class="col-sm-2 col-sm-offset-10" type="text" placeholder="search name..." ng-model="filter_name">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<td>Customer</td>
+						<td>Created Date</td>
+						<td>Actions</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="customer in customers | filter: filter_name">
+						<td ng-bind="customer.name"></td>
+						<td ng-bind="customer.date | date: longDate"></td>
+						<td><button class="btn btn-danger" ng-click="destroy($index)">Remove</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

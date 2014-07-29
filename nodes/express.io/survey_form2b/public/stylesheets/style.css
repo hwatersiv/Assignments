@@ -6,3 +6,16 @@ body {
 a {
   color: #00B7FF;
 }
+
+.border {
+	border: 2px solid black;
+	width: auto;
+	height: 300px;
+	padding: 20px;
+}
+
+.response {
+	display: none;
+	height: 100px;
+	background-color: LightGreen;
+}

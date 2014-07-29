@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= title %></title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/stylesheets/style.css">
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		$(document).ready(function () {
+			io = io.connect();
+			// login /////
+			$('.login_form').on('submit', function () {
+				var user = {};
+				user.name = $('input[name=name]').val();
+
+				io.emit('login', user);
+				$('.login').hide("slow", function () {
+					$('.groupchat').show("slow");
+				})
+				return false;
+				
+			})
+			io.on("logged_in", function (res) {
+				console.log(res.log[0].name);
+				$(".chat").append("<strong>Server</strong>: Welcome "+res.name+"!</p>")
+				
+				// This appends all the messages previously made on the server when logged in
+				for(var i = 0; i < res.log.length; i++){
+
+					$(".chat").append("<p><strong>"+res.log[i].name+":</strong>"+res.log[i].message+"!</p>")
+				}
+			})
+			// chatting /////
+			$('.message_form').on('submit', function () {
+				var chat = {};
+				chat.message = $('textarea').val();
+				io.emit("sending_message", chat);
+				$(".message_form").html('<textarea name="message" rows="3" class="form-control" placesholder="Enter your message here"></textarea><button class="btn btn-primary form-control" type="submit">Send</button>');
+				return false;
+			})
+			io.on('response_message', function (res) {
+				console.log(res);
+				$(".chat").append("<p><p><strong>"+res.name+":</strong> "+res.message+"</p>")
+			})
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="login col-sm-6 col-sm-offset-2">
+				<div class="form-group">
+					<form class="login_form form-horizontal" role="form">
+						<label class="label-control">Your Name: </label>
+						<input class="form-control" type="text" name="name" placeholder=" Enter your name here">
+						<button class="btn btn-default col-sm-offset-8">Cancel</button>
+						<button class="btn btn-primary" type="submit">OK</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="groupchat">
+				<h2>Conversation Board</h2>
+				<div class="chat col-sm-12">
+				</div>
+				<div class="form-group">
+					<form class="message_form" role="form">
+						<textarea name="message" rows="3" class="form-control" placesholder="Enter your message here"></textarea>
+						<button class="btn btn-primary form-control" type="submit">Send</button>
+					</form>
+				</div>				
+			</div>
+		</div>
+	</div>
+</body>
+</html>

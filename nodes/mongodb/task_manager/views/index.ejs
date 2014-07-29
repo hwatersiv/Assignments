@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+	<div class="container">
+		<div class="row">
+			<h2>Task Manager</h2>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<td>Tasks</td>
+						<td>Priority</td>
+						<td>Deadline</td>
+						<td>Created</td>
+						<td>Action</td>
+					</tr>
+				</thead>
+				<tbody>
+					<% for(var i = 0; i < tasks.length; i++){ %>
+						<tr>
+							<td><%= tasks[i].task %></td>
+							<td><%= tasks[i].priority %></td>
+							<td><%= tasks[i].date %></td>
+							<td><%= tasks[i].created_at %></td>
+							<td><form action="/tasks/<%= tasks[i]._id %>" method="post"><input type="hidden" name='action' value='delete'><button type="submit" class="btn btn-danger">Remove</button></form></td>
+
+						</tr>
+					<% } %>
+				</tbody>
+			</table>
+		</div>
+		<div class="row">
+			<h2>Add a New Task</h2>
+			<form action="/tasks/" class="form-horizontal col-sm-8" role="form" method="post">
+				<div class="form-group">
+					<label>Task Name:</label>
+					<input type="text" class="form-control" name="task" placeholder="Insert task name here">
+				</div>
+				<div class="form-group">
+					<label>Priority: </label>
+					<select name="priority" class="form-control">
+						<option value="low">LOW</option>
+						<option value="med">MED</option>
+						<option value="high">HIGH</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>Deadline:</label>
+					<input type="date" name="date" class="form-control">
+					<input type="hidden" name="action" value="create">
+					<button type="submit" class="btn btn-success col-sm-2 col-sm-offset-10">Create</button>
+				</div>
+			</form>
+		</div>
+	</div>
+  </body>
+</html>
