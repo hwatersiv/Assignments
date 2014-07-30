@@ -1,0 +1,19 @@
+<div class="row" ng-controller="Customers">
+	<h3>Add A New Order</h3>
+	<form role="form" class="form-horizontal col-sm-5">			
+		<div class="form-group" ng-controller="Customers">
+			<label class="label-control">Customer</label>
+			<select class="form-control" ng-model="order.cust" ng-options="customer.name for customer in customers"></select><br />
+			<label class="label-control">Order</label>
+			<select class="form-control" ng-model="order.quantity">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+			<select class="form-control" ng-model="order.prod" ng-options="product.name for product in products"></select><br />
+			<button class="btn btn-primary" ng-click="create()">Order</button>
+		</div>
+	</form>
+</div>
