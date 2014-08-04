@@ -1,0 +1,35 @@
+<div class="row" ng-controller="Orders">
+	<h3>Add A New Order</h3>
+	<form role="form" class="form-horizontal col-sm-5">			
+		<div class="form-group" ng-controller="Orders">
+			<label class="label-control">Customer</label>
+			<select class="form-control" ng-model="order.cust" ng-options="customer.name for customer in customers"></select><br />
+			<label class="label-control">Product</label>
+			<select class="form-control" ng-model="order.prod" ng-options="product.product for product in products"></select><br />
+			<label>Quantity</label>
+			<input type="number" min="1" max="15" class="form-control" ng-model="order.quantity">
+			<button class="btn btn-primary" ng-click="create()">Order</button>
+		</div>
+	</form>
+</div>
+<div class="row" ng-controller="Orders">
+	<input type="text" class="col-sm-2 col-sm-offset-10" ng-model="searchField" placeholder="search...">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<td>Customer Name</td>
+				<td>Product</td>
+				<td>Quantity</td>
+				<td>Date</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="order in orders | filter: searchField">
+				<td ng-bind="order.cust"></td>
+				<td ng-bind="order.product"></td>
+				<td ng-bind="order.quantity"></td>
+				<td ng-bind="order.date | date: 'medium'"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

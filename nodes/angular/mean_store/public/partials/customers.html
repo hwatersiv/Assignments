@@ -1,0 +1,23 @@
+<div class="row" ng-controller="Customers">
+	<h3>Add a New Customer</h3>
+	<div class="errors" style="color: red;" ng-bind="error"></div>
+	<label>Customer Name:</label><input type="text" ng-model="new_cust.name" placeholder="Full Name">
+	<button class="btn btn-primary" ng-click="create()">Add</button>
+	<input class="col-sm-2 col-sm-offset-10" type="text" placeholder="search name..." ng-model="filter_name">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<td>Customer</td>
+				<td>Created Date</td>
+				<td>Actions</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="customer in customers | filter: filter_name">
+				<td ng-bind="customer.name"></td>
+				<td ng-bind="customer.date | date: longDate"></td>
+				<td><button class="btn btn-danger" ng-click="destroy($index)">Remove</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
