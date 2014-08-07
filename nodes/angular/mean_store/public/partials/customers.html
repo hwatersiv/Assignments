@@ -14,9 +14,9 @@
 		</thead>
 		<tbody>
 			<tr ng-repeat="customer in customers | filter: filter_name">
-				<td ng-bind="customer.name"></td>
-				<td ng-bind="customer.date | date: longDate"></td>
-				<td><button class="btn btn-danger" ng-click="destroy($index)">Remove</button></td>
+				<td ng-bind="customer.customer"></td>
+				<td ng-bind="customer.created_at | date: longDate"></td>
+				<td><button class="btn btn-danger" ng-click="destroy(customer._id)">Remove</button></td>
 			</tr>
 		</tbody>
 	</table>

@@ -1,9 +1,22 @@
 var mongoose = require('mongoose');
-var CustomerSchema = new mongoose.Schema({
-	Customer: String, 
-	created_date: {type: Date, default: Date.now }
+
+var StoreSchema = new mongoose.Schema({
+	customer: String, 
+	created_at: {type: Date, default: Date.now }
+});
+mongoose.model('Store', StoreSchema);
+
+
+var ProductSchema = new mongoose.Schema({
+	product: String
+});
+mongoose.model('Product', ProductSchema);
+
+
+var OrderSchema = new mongoose.Schema({
+	customer: String,
+	product: String,
+	quantity: Number,
+	created_at: { type: Date, default: Date.now }
 })
-
-
-CustomerSchema.path('Customer').required(true, 'Customer name cannot be blank');
-mongoose.model('Store', CustomerSchema);
+mongoose.model('Order', OrderSchema);

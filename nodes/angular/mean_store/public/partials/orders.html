@@ -3,7 +3,7 @@
 	<form role="form" class="form-horizontal col-sm-5">			
 		<div class="form-group" ng-controller="Orders">
 			<label class="label-control">Customer</label>
-			<select class="form-control" ng-model="order.cust" ng-options="customer.name for customer in customers"></select><br />
+			<select class="form-control" ng-model="order.cust" ng-options="customer.customer for customer in customers"></select><br />
 			<label class="label-control">Product</label>
 			<select class="form-control" ng-model="order.prod" ng-options="product.product for product in products"></select><br />
 			<label>Quantity</label>
@@ -25,10 +25,10 @@
 		</thead>
 		<tbody>
 			<tr ng-repeat="order in orders | filter: searchField">
-				<td ng-bind="order.cust"></td>
+				<td ng-bind="order.customer"></td>
 				<td ng-bind="order.product"></td>
 				<td ng-bind="order.quantity"></td>
-				<td ng-bind="order.date | date: 'medium'"></td>
+				<td ng-bind="order.created_at | date: 'medium'"></td>
 			</tr>
 		</tbody>
 	</table>

@@ -8,8 +8,9 @@ module.exports = function Routes(app){
 	}); 
 
 	app.post('/tasks', function (req, res) {
+		console.log(req.body);
 		var a = new Task(req.body);
-
+		console.log(a);
 		a.save(function (err, a) {
 			res.redirect("/");
 		})
