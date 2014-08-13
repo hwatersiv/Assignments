@@ -1,14 +1,269 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transistional//EN"
-			"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transistional.dtd">
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 	<title>Brickbuster</title>
-	<script type="text/javascript" src="prototype-1.5.1.js"></script>
-	<script type="text/javascript" src="gameconsole.js"></script>
-	<script type="text/javascript" src="brickslayer.js"></script>
+	<script type="text/javascript" src="brickbuster.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<link rel="stylesheet" href="./css/brickbuster.css" />
 </head>
-<body>
+<script>
 	
+function Paddle () {
+	this.x = 336;
+	this.y = 335;
+	this.width = 73;
+	this.height = 15;
+	this.html_str = "<div id='paddle' style='width:"+this.width+"px;height:"+this.height+"px;top:"+this.y+"px;left:"+this.x+"px;'></div>";
+	this.draw = function () {
+		$('.screen').append(this.html_str);
+	}
+	this.move_left = function (ball) {
+		 if(ball.moving == false)
+		 {
+		 	$('#ball').css("left", ball.x -= 15);
+		 }
+		 $('#paddle').css("left", this.x -= 15);
+	}
+	this.move_right = function (ball) {
+		if(ball.moving == false)
+		{
+		 $('#ball').css("left", ball.x += 15);
+		}
+		$('#paddle').css("left", this.x += 15);
+	}
+}
+
+function Ball () {
+	this.x = 366;
+	this.y = 325;
+	this.size = 10;
+	this.x_direction = 1;
+	this.y_direction = 1;
+	this.moving = false;
+
+	this.html_str = "<div id='ball' style='top:"+this.y+"px;left:"+this.x+"px'><div>";
+	this.draw = function () {
+		$('.screen').append(this.html_str);
+	}
+	this.move = function () {
+		if(this.moving == false)
+		{
+			$('#ball').css({
+				top: this.y,
+				left:   this.x
+			});
+			
+			return null;
+		}
+		//game ends if 
+		// if (this.y < 45){
+		// 	this.moving = false;
+		// }
+		// if the ball is above a particular point
+		if ( this.y < 0 ){
+			// if the ball exceed a particular point reverse directions.
+			this.y_direction = -1;
+		}
+		if ( this.y > 390 ){
+			this.y_direction = 1;
+		}
+		if ( this.x > 790){
+			this.x_direction = -1;
+		}
+		if ( this.x < 0){
+			this.x_direction = 1;
+		}
+
+		$('#ball').css({
+			top: this.y -= 3 * this.y_direction,
+			left:   this.x += 3 * this.x_direction});
+		}
+}
+
+function Brick (x, y) {
+	this.x = x;
+	this.y = y;
+	this.width = 50;
+	this.height = 20;
+	this.color = function (y) {
+		if (y == 102){
+			return " orange";
+		}
+		if (y == 124){
+			return " yellow";
+		}
+		if (y == 146){
+			return " green";
+		}
+		else{
+			return "";
+		}
+	}
+	this.html_str = "<div class='brick"+this.color(this.y)+" brick_"+this.x+"_"+this.y+"' style='width:"+this.width+"px;height:"+this.height+"px;left:"+this.x+"px;top:"+this.y+"px;'></div>";
+	this.draw = function () {
+		$('.brick-container').append(this.html_str);
+	}
+}
+
+function GameLoop(){
+	var self = this;
+
+	this.initializeGame = function(){
+		this.wall = this.createBricks(35, 80);
+		this.paddle = new Paddle();
+		this.ball = new Ball();
+		this.lives = 3;
+		this.score = 0;
+
+		//draw the wall,paddle,ball
+		for(i in this.wall) {
+			this.wall[i].draw();
+		}
+		this.paddle.draw();
+		this.ball.draw();
+		this.updateLives();
+		this.updateScore();
+	}
+	this.createBricks = function (x, y) {
+		var bricks = [];
+		for (var i = 0; i <= 3; i++) {
+			for (var j = 0; j <= 13; j++){
+				bricks.push( new Brick( x+52*j, y+22*i) );
+			}
+		}
+		return bricks;
+	}
+	this.gameLoop = function(){
+		//move the ball and do detect collisionDetection
+		self.ball.move();
+		self.collisionDetection();
+		
+		// game ends
+		if (self.ball.y > self.paddle.y + self.paddle.height){
+			self.ball.moving = false;
+			console.log(self.paddle);
+			self.ball.x = self.paddle.x+self.paddle.width/2;
+			self.ball.y = self.paddle.y-10;
+			self.lives -= 1;
+			if(self.lives<1)
+			{
+				alert('game over!');
+				self.lives=3;
+			}
+			self.updateLives();
+		}
+	}
+	this.updateLives = function(){
+		$('#lives').html(this.lives)
+	}	
+	this.updateScore = function(){
+		$('#score').html(this.score);
+	}
+	this.collisionDetection = function(){
+	
+		//if the ball hits the range of the paddle's x then switch directions
+		if (this.ball.x > this.paddle.x && this.ball.x + this.ball.size < (this.paddle.x + this.paddle.width) && this.paddle.y < this.ball.y + this.ball.size && this.ball.y < (this.paddle.y + this.paddle.height))
+		{
+			this.ball.y_direction *= -1;
+
+			//see if it collided on the left
+			if(Math.abs(this.paddle.x - this.ball.x)  < 5)
+			{
+				this.ball.x_direction *= -1;
+				console.log('collided on the left', this.paddle.x, this.ball.x);
+			}
+			//see if it collided on the right
+			if(Math.abs(this.paddle.x + this.paddle.width - this.ball.x)  < 5)
+			{
+				this.ball.x_direction *= -1;
+				console.log('collided on the right', this.paddle.x, this.ball.x);
+			
+			}
+
+		}
+
+		//if the ball hits the range of a brick's x and y then switch directions
+		for (var i = 0; i < this.wall.length; i++) {
+			if (this.ball.x > this.wall[i].x && this.ball.x + this.ball.size < (this.wall[i].x + this.wall[i].width) && this.wall[i].y < this.ball.y + this.ball.size && this.ball.y < (this.wall[i].y + this.wall[i].height))
+			{
+				//console.log('hit the brick', i);
+
+				this.score += 10;
+				this.updateScore();
+
+				this.ball.y_direction *= -1;
+
+				//see if it collided on the left
+				if(Math.abs(this.wall[i].x - this.ball.x)  < 5)
+				{
+					this.ball.x_direction *= -1;
+					console.log('hit the left side of the brick ', i);
+				}
+				//see if it collided on the right
+				else if(Math.abs(this.wall[i].x + this.wall[i].width - this.ball.x)  < 5)
+				{
+					this.ball.x_direction *= -1;
+					console.log('hit the right side of the brick ', i)
+				}
+
+				
+				//remove the appropriate brick from HTML
+				$('.brick_'+this.wall[i].x+'_'+this.wall[i].y).remove();
+
+				//remove the brick from the wall array
+				this.wall[i] = this.wall[this.wall.length-1];
+				this.wall.pop();				
+			}
+		}
+	}
+	this.attachKeyEvents = function(){
+		$(document).on("keydown", function (e) {
+			// console.log( "ball position: ", self.ball.x, self.ball.y);
+			// console.log( "paddle start position ", self.paddle.x, self.paddle.y);
+			if(self.paddle.x < 12){
+				self.paddle.x = 12;
+			}
+			if (self.paddle.x > 720){
+				self.paddle.x = 720;
+			}
+			if(e.keyCode == 37){
+				self.paddle.move_left(self.ball);
+			}
+			else if(e.keyCode == 39){
+				self.paddle.move_right(self.ball);
+			}
+			else if(e.keyCode == 32){
+				self.ball.moving = true;
+			}
+		});
+	}
+}
+
+$(document).ready(function () {
+	var game = new GameLoop();
+	game.initializeGame();
+	game.attachKeyEvents();
+	setInterval(game.gameLoop, 15);	
+});
+</script>
+
+<body>
+	<div id="console">
+		<div class="screen">
+			<div class="brick-container">
+				<!--<div class="brick" style="width: 50px;height: 20px; top: 80px; left: 20px;"></div> -->
+				<!-- <div class="brick" style="width: 50px;height: 20px; top: 80px; left: 72px;"></div>
+				<div class="brick" style="width: 50px;height: 20px; top: 80px; left: 122px;"></div>	 -->
+				<!--<div class="brick" style="width: 50px;height: 20px; top: 102px; left: 20px;"></div> -->
+			</div>
+			<!-- <div id="ball"></div> -->
+		</div>
+	</div>
+	<div class="score_panel">
+		<h4>Your Score: <span id='score'></span></h4>
+		<h4>Lives: <span id='lives'></span></h4>
+		<div class="life"></div><div class="life"></div><div class="life"></div>
+	</div>
 </body>
 </html>
