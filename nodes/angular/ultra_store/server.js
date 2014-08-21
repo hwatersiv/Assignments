@@ -1,7 +1,7 @@
 var express = require('express.io'),
-    http = require('http'),
+	http = require('http'),
     path = require('path'),
-    app = express();
+    app = express().http().io();
 
 // all environments
 
@@ -14,6 +14,8 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
+app.use( express.cookieParser() );
+app.use(express.session({secret: 'monkey'})); //for using sessions
 app.use(express.static(path.join(__dirname,'public')));
 
 
@@ -24,6 +26,6 @@ if ('development' == app.get('env')) {
 }
 var mongoose = require('./config/mongoose');
 var routes = require('./config/routes')(app);
-http.createServer(app).listen(app.get('port'), function () {
+app.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
 });

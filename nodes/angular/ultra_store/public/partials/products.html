@@ -2,7 +2,7 @@
 	<input type="text" class="form-control" ng-model="prod_filter" placeholder="search...">
 	<h4>Add a New Product</h4>
 	<label>Name:</label><input type="text" class="form-control" ng-model="new_prod.name">
-	<label>Image (url):</label><input type="url" class="form-control" ng-model="new_prod.url" placeholder="http://">
+	<label>Image (url):</label><input type="url" class="form-control" ng-model="new_prod.url" placeholder="http://" />
 	<label>Description:</label><textarea class="form-control" ng-model="new_prod.desc"></textarea>
 	<label>Initial Quantity:</label>
 	<input type="number" ng-model="new_prod.quantity" class="form-control" min="1" max="99">
@@ -10,7 +10,7 @@
 </div>
 <div class="row col-sm-8 col-sm-offset-1 product_area" ng-controller="Products">
 	<div class="col-sm-4" ng-repeat="product in products | filter: prod_filter">
-		<img src="http://fillmurray.com/200/300" alt="" class="col-sm-12">
+		<img ng-src="{{product.url}}" alt="" class="col-sm-12">
 		<strong class="col-sm-12"ng-bind="product.name"></strong>
 		<p class="col-sm-12" ng-bind="product.quantity"></p>
 	</div>
