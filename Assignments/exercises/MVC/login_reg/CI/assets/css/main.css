@@ -1,0 +1,17 @@
+		#header{
+			margin: 30px 0px;
+		}
+		#register-sec{
+			border: 2px solid black;
+			text-align: center;
+			width: 40%;
+			display: inline-block;
+		}
+		#login-sec{
+			border: 2px solid black;
+			text-align: center;
+			width: 30%;
+			display: inline-block;
+			margin-left: 20%;
+			vertical-align: top;
+		}
